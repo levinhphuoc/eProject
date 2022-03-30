@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>homepage</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="css/style.css" rel="stylesheet">
+    </head>
+    <body>
+        <div class="logo">
+            <img src="images/logo4.jpg" alt="logo">
+        </div>
+    <hr style="border-width: 3px">
+    <div id="menu">
+        <ul>
+            <li><a href="homepage.html">ABOUT US</a></li>
+            <li><a href="#">MENU</a></li>
+            <li><a href="reservation.html">RESERVATION</a></li>
+            <li><a href="#"><span>BonBon</span></a></li>
+            <li><a href="#">EVENTS</a></li>
+            <li><a href="">GALLERY</a></li>
+            <li><a href="#">CONTACT</a></li>
+        </ul>
+    </div>
+    <hr style="border-width: 3px">
+    <div>
+        <h1>Online Booking</h1>
+    </div>
+    
+    <div class="main-area">
+        <form action="homepage.html" onsubmit="showConfirm()" class="form-body">
+           
+            <table>
+                <tr>
+                    <td class="form-label">Full name</td>
+                    <td>
+                        <input type="text" required id="name">
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="form-label">Email</td>
+                    <td>
+                        <input type="text" pattern="^\w+@\w+\.[a-z]{2,3}$" id="email" required>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="form-label">Phone Number</td>
+                    <td>
+                        <input type="text" pattern="^\d{2}-\d{3}-\d{7}$" id="phone" required>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="form-label">No.of Persons</td>
+                    <td>
+                        <select id="no_person">
+                            <option value="">1 person</option>
+                            <option value="">2 persons</option>
+                            <option value="">3 persons</option>
+                            <option value="">4 persons</option>
+                            <option value="">5 persons</option>
+                            <option value="">More...</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="form-label">Set Date</td>
+                    <td>
+                        <input type="date" id="set_date" required>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="form-label">Time Set</td>
+                    <td>
+                        <input type="time" id="set_time" required>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="form-label">Comment</td>
+                    <td>
+                        <textarea id="comment" cols="40" rows="4"></textarea>
+                    </td>
+                </tr>
+                
+                <tr>
+                    <td colspan="2">
+                        <input type="submit" value="RESERVE A TABLE" onclick="showConfirm()">
+                        
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </div>
+    
+    <script>
+        
+
+        function showConfirm() {
+            var name = document.getElementById("name").value;
+            var phone = document.getElementById("phone").value;
+            
+            alert("This site says... " + "\n" +
+                  "Thanks you Mr/Ms." + name + "\n" +
+                  "Your reservation has been recorded by system." + "\n" +
+                  "We'll contact you soon at the telephone no." + phone);
+          
+        }
+    </script>
+    
+    </body>
+</html>
